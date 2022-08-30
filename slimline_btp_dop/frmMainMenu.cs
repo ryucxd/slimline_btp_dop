@@ -147,13 +147,11 @@ namespace slimline_btp_dop
                                 if (String.IsNullOrEmpty(dt.Rows[row][column].ToString()) == false)
                                     packed = packed + Convert.ToDouble(dt.Rows[row][column].ToString());
                             }
-
                         }
                         //now add them to the last two rows
                         dt.Rows[dt.Rows.Count - 3][column] = packed.ToString();
                         dt.Rows[dt.Rows.Count - 2][column] = invoiced.ToString();
                         dt.Rows[dt.Rows.Count - 1][column] = (packed - invoiced).ToString();
-
                     }
 
 
